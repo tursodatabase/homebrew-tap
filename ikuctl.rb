@@ -5,20 +5,20 @@
 class Ikuctl < Formula
   desc ""
   homepage "https://github.com/chiselstrike/homebrew-tap"
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/chiselstrike/homebrew-tap/releases/download/v0.0.3/homebrew-tap_Darwin_x86_64.tar.gz"
-      sha256 "ff204e5b53b4ef87a18a72aed8a7a758ea7dfd2304272dd20ffb2db8c3ccd785"
+    if Hardware::CPU.arm?
+      url "https://github.com/chiselstrike/homebrew-tap/releases/download/v0.0.4/homebrew-tap_Darwin_arm64.tar.gz"
+      sha256 "937aa1ec41abf807a0d5c2e65df4c9dd11407ae30175a2c32de1eedc2dc2cb17"
 
       def install
         bin.install "ikuctl"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/chiselstrike/homebrew-tap/releases/download/v0.0.3/homebrew-tap_Darwin_arm64.tar.gz"
-      sha256 "ef5f8094bef531746894f1d2482c22f0f080dae9023752fe9f0c453564ccb07c"
+    if Hardware::CPU.intel?
+      url "https://github.com/chiselstrike/homebrew-tap/releases/download/v0.0.4/homebrew-tap_Darwin_x86_64.tar.gz"
+      sha256 "dca2def312371883add927eb6b5d866b6870ce5463ef77122f9d661538d51589"
 
       def install
         bin.install "ikuctl"
@@ -27,17 +27,17 @@ class Ikuctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chiselstrike/homebrew-tap/releases/download/v0.0.3/homebrew-tap_Linux_arm64.tar.gz"
-      sha256 "2e9facccae8a3dd52165da10fa42027139e446d56ddb15bb09df99f7f57321b3"
+    if Hardware::CPU.intel?
+      url "https://github.com/chiselstrike/homebrew-tap/releases/download/v0.0.4/homebrew-tap_Linux_x86_64.tar.gz"
+      sha256 "9cbc0d35f20ea8f6dac0b29e6c293ad298d56108b4d85dbb988781bfb285f4bf"
 
       def install
         bin.install "ikuctl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/chiselstrike/homebrew-tap/releases/download/v0.0.3/homebrew-tap_Linux_x86_64.tar.gz"
-      sha256 "555e36df74303b1b000f2d91d9c005f4739c6449e217d2793c4c506db2c96b0b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/chiselstrike/homebrew-tap/releases/download/v0.0.4/homebrew-tap_Linux_arm64.tar.gz"
+      sha256 "9dedef9349e0db3c61303b82f1044820ef059b741d2a6997bc467bd983da9d9a"
 
       def install
         bin.install "ikuctl"
