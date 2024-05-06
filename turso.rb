@@ -5,14 +5,14 @@
 class Turso < Formula
   desc ""
   homepage "https://github.com/tursodatabase/homebrew-tap"
-  version "0.93.5"
+  version "0.93.6"
 
   depends_on "libsql/sqld/sqld"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tursodatabase/homebrew-tap/releases/download/v0.93.5/homebrew-tap_Darwin_x86_64.tar.gz"
-      sha256 "df1286989f8f2b8116fc63867e068da0a702b2e036727a71e42e7e3a75ee458f"
+      url "https://github.com/tursodatabase/homebrew-tap/releases/download/v0.93.6/homebrew-tap_Darwin_x86_64.tar.gz"
+      sha256 "960e78cf8e34ea82845e0b938c4e6103435911a345f5250bef0bd42e81055c7f"
 
       def install
         bin.install "turso"
@@ -22,8 +22,8 @@ class Turso < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tursodatabase/homebrew-tap/releases/download/v0.93.5/homebrew-tap_Darwin_arm64.tar.gz"
-      sha256 "45ee8fc43b909fc6ce02492545ef8bad98d2c3a693b60dec0db92c62defdffe5"
+      url "https://github.com/tursodatabase/homebrew-tap/releases/download/v0.93.6/homebrew-tap_Darwin_arm64.tar.gz"
+      sha256 "17075bc661d022bb6ade8a3ab5b1fe87fd4069752843808da7b33f3e4b8be8f3"
 
       def install
         bin.install "turso"
@@ -36,8 +36,8 @@ class Turso < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/tursodatabase/homebrew-tap/releases/download/v0.93.5/homebrew-tap_Linux_x86_64.tar.gz"
-      sha256 "3a0187c3362f23e63d9bd9f6f9e72279afae7c33952c596784cdda111ecff84f"
+      url "https://github.com/tursodatabase/homebrew-tap/releases/download/v0.93.6/homebrew-tap_Linux_x86_64.tar.gz"
+      sha256 "8c0a5011db078a8d6c69875be3f05358a1377eaff418c5cc854627adbcaa1132"
 
       def install
         bin.install "turso"
@@ -47,8 +47,8 @@ class Turso < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tursodatabase/homebrew-tap/releases/download/v0.93.5/homebrew-tap_Linux_arm64.tar.gz"
-      sha256 "a7cfd59981df4da955fe9297222b5db28a76c7b87d4e7ac1e7e2720f1e4f48bd"
+      url "https://github.com/tursodatabase/homebrew-tap/releases/download/v0.93.6/homebrew-tap_Linux_arm64.tar.gz"
+      sha256 "a7af382b67044487e08cb31d3d3ec79963d7f5247ed6b7896caf9c5d2e1d95cc"
 
       def install
         bin.install "turso"
